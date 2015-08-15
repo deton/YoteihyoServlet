@@ -1,0 +1,34 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'war'
+
+mainClassName = 'io.github.deton.yoteihyo.ExchangeClient'
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+run {
+    // Usage: gradle run -Pargs="exchange.example.com taro@example.com p@sSw0rD room-00309@example.com"
+    // cf. http://qiita.com/opengl-8080/items/4c1aa85b4737bd362d9e
+    // "args" というプロパティが渡されていたら
+    if (project.hasProperty('args')) {
+        // 空白文字で split して、 run タスクの args オプションにセットする
+        args project.args.split('\\s+')
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // ews-java-api-XXX.jar in ./lib/
+    compile fileTree(dir: './lib', includes: ['*.jar'])
+    compile 'commons-httpclient:commons-httpclient:3.1'
+    compile 'commons-logging:commons-logging:1.2'
+    compile 'jcifs:jcifs:1.3.17'
+
+    providedCompile 'javax.servlet:javax.servlet-api:3.0.1'
+}
+
+war {
+    archiveName 'YoteihyoServlet.war'
+}
