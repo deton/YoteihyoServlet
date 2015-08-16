@@ -4,7 +4,7 @@
 Microsoft Exchange Serverから、
 指定した複数emailアドレスの予定を取得するServletです。
 
-[Arduinoに接続したTFT LCDに行動予定表を表示](https://github.com/deton/yoteihyo#適用例-行動予定表)するために作成。
+[Arduinoに接続したTFT LCDに行動予定表を表示](https://github.com/deton/TFTKanji#適用例-行動予定表)するために作成。
 
 明日の予定までを取得してJSON形式で返します。
 
