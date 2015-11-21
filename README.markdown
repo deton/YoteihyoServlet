@@ -36,6 +36,6 @@ LocalProperties.javaにあるので変更してください。
 gradle warでビルドしたwarファイルを、tomcat等に配備。
 
 ## 関連
-* [Arduinoに接続したTFT LCDに行動予定表表示](https://github.com/deton/yoteihyo#適用例-行動予定表)
+* [Arduinoに接続したTFT LCDに行動予定表表示](https://github.com/deton/TFTKanji#適用例-行動予定表)
 * [yoteibot: Microsoft Exchange Serverから予定を取得してIRCに通知するボット](https://github.com/deton/ExchangeAppointmentBot)
 * [会議室予約状況取得Servlet(MeetingRoomServlet)](https://github.com/deton/presencelamp#会議室予約状況取得servletサーバ側meetingroomservlet)
